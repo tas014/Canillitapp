@@ -52,8 +52,8 @@ const CenteredGrid = props => {
                         <MediaCard content={el} />
                     </Grid>)
                 }
-                <button onClick={handleLoadMore}>Load More</button>
             </Grid>
+            <button onClick={handleLoadMore}>Load More</button>
         </div>
     );
 }
