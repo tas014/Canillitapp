@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.App>div{
+  width: 100%;
+}
+
+section {
+  width: 95vw;
+  justify-self: center;
+  margin-top: 2%;
+}

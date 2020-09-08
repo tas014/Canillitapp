@@ -1,0 +1,13 @@
+article img {
+    width: 100%;
+    object-fit: cover;
+    min-height: 30vh;
+}
+
+article {
+    text-align: start;
+    background-color: gray;
+    padding: 3%;
+    border-radius: 0.4em;
+    min-height: 60vh;
+}
