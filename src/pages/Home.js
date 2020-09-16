@@ -17,17 +17,17 @@ const Home = () =>{
                 const response = await axios.get(`https://api.canillitapp.com/latest/${diaDeHoy}`);
                 console.log(response.data);
                 const data = response.data;
-                setLoading(false);
                 setNews(data);
+                setLoading(false);
             } catch (error) {
                 console.error('este es mi error',error);
             }
         }
         fetchData();
-    },[])
+    },[diaDeHoy])
     return(
         <Layout>
-            { !loading ? <CenteredGrid data={news} /> : <GridSkeleton />}
+            { !loading ? <CenteredGrid data={news} /> : <GridSkeleton type={true} />}
         </Layout>
     )
 }

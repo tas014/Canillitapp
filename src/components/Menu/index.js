@@ -28,12 +28,12 @@ export default function SimpleMenu() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}><Link to="/">Home</Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link to="/category/politica">Politica</Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link to="/category/internacionales">Internacionales</Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link to="/category/tecnologia">Tecnologia</Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link to="/category/espectaculos">Espectaculos</Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link to="/category/deportes">Deportes</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link style={{ textDecoration: 'none', color: 'whitesmoke' }} to="/">Home</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link style={{ textDecoration: 'none', color: 'whitesmoke' }} to="/category/politica">Politica</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link style={{ textDecoration: 'none', color: 'whitesmoke' }} to="/category/internacionales">Internacionales</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link style={{ textDecoration: 'none', color: 'whitesmoke' }} to="/category/tecnologia">Tecnologia</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link style={{ textDecoration: 'none', color: 'whitesmoke' }} to="/category/espectaculos">Espectaculos</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link style={{ textDecoration: 'none', color: 'whitesmoke' }} to="/category/deportes">Deportes</Link></MenuItem>
       </Menu>
     </div>
   );

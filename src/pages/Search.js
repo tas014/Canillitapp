@@ -4,6 +4,7 @@ import Layout from '../container/Layout';
 import MediaCard from '../components/MediaCard';
 import axios from 'axios';
 import Grid from '@material-ui/core/Grid';
+import GridSkeleton from '../components/GridSkeleton';
 
 const Search = () =>{
     let {query} = useParams();
@@ -29,7 +30,7 @@ const Search = () =>{
         <Layout>
             {!loading ? <Grid container spacing={3}>
                 {news.map(el => <Grid item xs={3}><MediaCard content={el} /></Grid>)}
-            </Grid> : 'LOADING...'}
+            </Grid> : <GridSkeleton type={false} />}
         </Layout>
     )
 }

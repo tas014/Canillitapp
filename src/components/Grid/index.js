@@ -1,7 +1,8 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import MediaCard from '../MediaCard';
+import Button from '@material-ui/core/Button'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -19,21 +20,27 @@ const CenteredGrid = props => {
     const { data } = props;
     const [bulkData, setBulkData] = useState([]);
     const [currentAmount, setCurrentAmount] = useState(0);
+    const [stillGotNotes, setNotes] = useState(true);
 
-    useEffect(()=>{
-        setBulkData([...data.slice(2,32)]);
-        setCurrentAmount(32);
-    },[]);
+    useEffect(() => {
+        setBulkData([...data.slice(2, 30)]);
+        setCurrentAmount(30);
+    }, []);
 
-    console.log('bulkdata: ',bulkData,'amount: ', currentAmount);
+    window.onscroll = function (ev) {
+        if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight * 0.9) {
+            handleLoadMore();
+        }
+    };
+
+    console.log('bulkdata: ', bulkData, 'amount: ', currentAmount);
 
     const handleLoadMore = () => {
+        console.log(data.length, ' ', currentAmount);
         setCurrentAmount(currentAmount + 32);
-        const count=[...data.slice(2, currentAmount)];
+        const count = [...data.slice(2, currentAmount)];
         setBulkData(count);
     }
-
-    handleLoadMore();
 
     return (
         <div className={classes.root}>
@@ -53,7 +60,6 @@ const CenteredGrid = props => {
                     </Grid>)
                 }
             </Grid>
-            <button onClick={handleLoadMore}>Load More</button>
         </div>
     );
 }

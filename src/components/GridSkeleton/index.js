@@ -3,7 +3,9 @@ import Grid from '@material-ui/core/Grid';
 import Skeleton from '@material-ui/lab/Skeleton';
 
 export default function GridSkeleton(props) {
-    return (
+    const {type} = props;
+    if (type) {
+      return (
         <div >
             <Grid container spacing={3}>
                 <Grid item xs={12}>
@@ -15,11 +17,28 @@ export default function GridSkeleton(props) {
                 <Grid item xs={12} sm={6}>
                 <Skeleton animation="wave" variant="rect" width={210} height={300} style={{ width: '100%' }} />
                 </Grid>
-                <Grid  item xs={12} sm={3}><Skeleton animation="wave" variant="rect" width={210} height={250} style={{ width: '100%' }} /></Grid>
-                <Grid  item xs={12} sm={3}><Skeleton animation="wave" variant="rect" width={210} height={250} style={{ width: '100%' }} /></Grid>
-                <Grid  item xs={12} sm={3}><Skeleton animation="wave" variant="rect" width={210} height={250} style={{ width: '100%' }} /></Grid>
-                <Grid  item xs={12} sm={3}><Skeleton animation="wave" variant="rect" width={210} height={250} style={{ width: '100%' }} /></Grid>
+                <Grid  item xs={12} sm={3}><Skeleton animation="wave" variant="rect" width={210} height={500} style={{ width: '100%' }} /></Grid>
+                <Grid  item xs={12} sm={3}><Skeleton animation="wave" variant="rect" width={210} height={500} style={{ width: '100%' }} /></Grid>
+                <Grid  item xs={12} sm={3}><Skeleton animation="wave" variant="rect" width={210} height={500} style={{ width: '100%' }} /></Grid>
+                <Grid  item xs={12} sm={3}><Skeleton animation="wave" variant="rect" width={210} height={500} style={{ width: '100%' }} /></Grid>
             </Grid>
         </div>
-    );
+    )  
+    } else {
+        return (
+            <div>
+                <Grid container spacing={3}>
+                    <Grid  item xs={12} sm={3}><Skeleton animation="wave" variant="rect" width={210} height={500} style={{ width: '100%' }} /></Grid>
+                    <Grid  item xs={12} sm={3}><Skeleton animation="wave" variant="rect" width={210} height={500} style={{ width: '100%' }} /></Grid>
+                    <Grid  item xs={12} sm={3}><Skeleton animation="wave" variant="rect" width={210} height={500} style={{ width: '100%' }} /></Grid>
+                    <Grid  item xs={12} sm={3}><Skeleton animation="wave" variant="rect" width={210} height={500} style={{ width: '100%' }} /></Grid>
+                    <Grid  item xs={12} sm={3}><Skeleton animation="wave" variant="rect" width={210} height={500} style={{ width: '100%' }} /></Grid>
+                    <Grid  item xs={12} sm={3}><Skeleton animation="wave" variant="rect" width={210} height={500} style={{ width: '100%' }} /></Grid>
+                    <Grid  item xs={12} sm={3}><Skeleton animation="wave" variant="rect" width={210} height={500} style={{ width: '100%' }} /></Grid>
+                    <Grid  item xs={12} sm={3}><Skeleton animation="wave" variant="rect" width={210} height={500} style={{ width: '100%' }} /></Grid>
+                </Grid>
+            </div>
+        )
+    }
+    ;
 }

@@ -35,7 +35,7 @@ const Category = (props) => {
 
     return (
         <Layout loading={loading}>
-            {!loading ? <Grid data={news} /> : <GridSkeleton />}
+            {!loading ? <Grid data={news} /> : <GridSkeleton type={true} />}
         </Layout>
     )
 }

@@ -8,6 +8,7 @@ const Layout = ({children}) =>{
             <section>
                {children} 
             </section>
+            <span className='noMore'>No hay más noticias que ver aqui.</span>
         </div>
     )
 }
